@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 
 export default function Countdown() {
-  const targetDate = useMemo(() => new Date("2026-07-03T00:00:00"), []);
+  const targetDate = useMemo(() => new Date("2026-07-30T00:00:00"), []);
 
   const calculateTimeLeft = () => {
     const now = new Date();

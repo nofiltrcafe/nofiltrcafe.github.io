@@ -99,7 +99,7 @@ export default function Hero() {
             <Countdown />
           </div>
           <p className="mt-12 text-center text-3xl font-medium italic tracking-[0.01em] text-[#C8A27C] sm:text-4xl" style={{ fontFamily: "Cormorant Garamond, serif" }}>
-            Cafe Opens on 3rd July 2026
+            Cafe Opens on 30th July 2026
           </p>
         </motion.div>
       </section>
