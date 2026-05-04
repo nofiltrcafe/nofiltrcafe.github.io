@@ -25,7 +25,7 @@ export default function Hero() {
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap');
       `}</style>
 
-      <section className="relative min-h-screen overflow-hidden border-b border-[#C8A27C]/15">
+      <section className="relative min-h-screen overflow-hidden">
         <motion.div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/images/Coffeeshopbg.jpg')", y: bgY }} />
         <div className="absolute inset-0 bg-gradient-to-b from-[#120b09]/90 via-[#1a100d]/52 to-[#1f120e]/65" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(200,162,124,0.18),transparent_44%)]" />
@@ -90,7 +90,7 @@ export default function Hero() {
         </motion.div>
       </section>
 
-      <section className="border-b border-[#C8A27C]/12 bg-gradient-to-b from-[#362019] to-[#3b231c]">
+      <section className="bg-gradient-to-b from-[#362019] to-[#3b231c]">
         <motion.div {...fadeUp} className="mx-auto w-full max-w-5xl px-6 py-12 sm:py-14">
           <h5 className="mt-2 text-center text-5xl font-medium leading-[1.04] tracking-[0.01em] text-[#F5F5DC] sm:text-6xl" style={{ fontFamily: "Cormorant Garamond, serif" }}>
             <span className="italic text-[#C8A27C]">We've been busy! You'll see why </span>
@@ -104,7 +104,7 @@ export default function Hero() {
         </motion.div>
       </section>
 
-      <section className="flex justify-center border-b border-[#C8A27C]/12 bg-gradient-to-b from-[#3b231c] to-[#311d17]">
+      <section className="flex justify-center bg-gradient-to-b from-[#3b231c] to-[#311d17]">
         <motion.div {...fadeUp} className="w-full max-w-5xl px-6 py-28 text-center sm:py-32">
           <p className="text-center text-[0.68rem] font-medium uppercase tracking-[0.6em] text-[#C8A27C] sm:text-xs">The Philosophy</p>
           <h2 className="mx-auto mt-7 max-w-4xl text-center text-5xl font-medium leading-[1.02] tracking-[0.01em] text-[#F5F5DC] sm:text-6xl" style={{ fontFamily: "Cormorant Garamond, serif" }}>
@@ -116,7 +116,7 @@ export default function Hero() {
         </motion.div>
       </section>
 
-      <section className="border-b border-[#C8A27C]/12 bg-gradient-to-b from-[#311d17] to-[#2b1914]">
+      <section className="bg-gradient-to-b from-[#311d17] to-[#2b1914]">
         <motion.div {...fadeUp} className="mx-auto w-full max-w-6xl px-6 py-20 sm:py-24">
           <p className="text-center text-[0.68rem] font-medium uppercase tracking-[0.6em] text-[#C8A27C] sm:text-xs">The Vibe</p>
           <h3 className="mt-5 text-center text-5xl font-medium tracking-[0.01em] text-[#F5F5DC] sm:text-6xl" style={{ fontFamily: "Cormorant Garamond, serif" }}>Curated for the senses</h3>
