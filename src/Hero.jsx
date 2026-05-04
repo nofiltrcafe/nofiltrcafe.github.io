@@ -144,7 +144,7 @@ export default function Hero() {
         </motion.div>
       </section>
 
-      <section className="overflow-hidden border-b border-[#C8A27C]/12 bg-[#291711] py-5">
+      <section className="overflow-hidden border-y border-[#C8A27C]/12 bg-[#291711] py-5">
         <motion.div animate={{ x: ["0%", "-50%"] }} transition={{ duration: 26, repeat: Infinity, ease: "linear" }} className="flex w-[200%]">
           {[0, 1].map((i) => (
             <div key={i} className="flex min-w-[100%] items-center justify-around gap-14 whitespace-nowrap px-8 text-4xl italic text-[#C8A27C]/92 sm:text-4xl" style={{ fontFamily: "Cormorant Garamond, serif" }}>
