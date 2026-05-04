@@ -1,11 +1,11 @@
-﻿import { motion, useScroll, useTransform } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import Countdown from "./Countdown";
 
 const vibes = [
-  { id: "01", icon: "COF", title: "Specialty Coffee", desc: "Espresso · Latte · Cappuccino" },
-  { id: "02", icon: "FOOD", title: "Delicious Food", desc: "Burgers · Sandwiches" },
-  { id: "03", icon: "MIX", title: "Savory Mocktails", desc: "Hand-muddled · Refreshing" },
-  { id: "04", icon: "LIVE", title: "Live Music", desc: "Guitar · Piano · Light sets" },
+  { id: "01", icon: "COF", title: "Specialty Coffee", desc: "Espresso - Latte - Cappuccino" },
+  { id: "02", icon: "FOOD", title: "Delicious Food", desc: "Burgers - Sandwiches" },
+  { id: "03", icon: "MIX", title: "Savory Mocktails", desc: "Hand-muddled - Refreshing" },
+  { id: "04", icon: "LIVE", title: "Live Music", desc: "Guitar - Piano - Light sets" },
 ];
 
 const fadeUp = {
@@ -16,92 +16,94 @@ const fadeUp = {
 };
 
 export default function Hero() {
-  const { scrollYProgress } = useScroll();
-  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "12%"]);
-
   return (
     <main className="relative text-[#F5F5DC]">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap');
       `}</style>
 
-      <section className="relative min-h-screen overflow-hidden">
-        <motion.div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/images/Coffeeshopbg.jpg')", y: bgY }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#120b09]/90 via-[#1a100d]/52 to-[#1f120e]/65" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(200,162,124,0.18),transparent_44%)]" />
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(0,0,0,0.36)_100%)]" />
+      <section className="relative h-screen overflow-hidden [perspective:1px]">
+        <div className="relative h-screen [transform-style:preserve-3d]">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat [transform:translateZ(-1px)_scale(2)]"
+            style={{ backgroundImage: "url('/images/Coffeeshopbg.jpg')" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#120b09]/90 via-[#1a100d]/52 to-[#1f120e]/65" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(200,162,124,0.18),transparent_44%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(0,0,0,0.36)_100%)]" />
 
-        <motion.div
-          animate={{ opacity: [0.08, 0.17, 0.08] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="pointer-events-none absolute inset-0 mix-blend-soft-light"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 18% 30%, rgba(200,162,124,0.18) 0, transparent 2px), radial-gradient(circle at 72% 60%, rgba(200,162,124,0.13) 0, transparent 2px), radial-gradient(circle at 45% 80%, rgba(245,245,220,0.08) 0, transparent 1.5px)",
-            backgroundSize: "180px 180px, 220px 220px, 160px 160px",
-          }}
-        />
+          <motion.div
+            animate={{ opacity: [0.08, 0.17, 0.08] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className="pointer-events-none absolute inset-0 mix-blend-soft-light"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 18% 30%, rgba(200,162,124,0.18) 0, transparent 2px), radial-gradient(circle at 72% 60%, rgba(200,162,124,0.13) 0, transparent 2px), radial-gradient(circle at 45% 80%, rgba(245,245,220,0.08) 0, transparent 1.5px)",
+              backgroundSize: "180px 180px, 220px 220px, 160px 160px",
+            }}
+          />
 
-        <motion.div
-          initial={{ opacity: 0, y: 34 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.15, ease: [0.16, 1, 0.3, 1] }}
-          className="relative z-20 mx-auto flex min-h-screen w-full max-w-5xl flex-col items-center justify-center px-6 pb-20 pt-16 text-center"
-          style={{ fontFamily: "Manrope, sans-serif" }}
-        >
-          <p className="rounded-full border border-white/20 bg-white/12 px-5 py-2 text-[0.68rem] font-medium uppercase tracking-[0.62em] text-[#C8A27C]/95 shadow-[0_0_22px_rgba(245,245,220,0.16)] backdrop-blur-md sm:text-xs">
-            Something Premium Is Brewing
-          </p>
-
-          <div className="relative mt-10">
-            <motion.div
-              animate={{ scale: [1, 1.04, 1], opacity: [0.2, 0.34, 0.2] }}
-              transition={{ duration: 4.4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute left-1/2 top-1/2 h-52 w-52 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C8A27C]/35 blur-3xl"
-            />
-            <motion.div
-              animate={{ y: [0, -9, 0] }}
-              transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut" }}
-              className="relative rounded-[2rem] border border-[#C8A27C]/20 bg-[#6F4E37]/36 p-3 backdrop-blur-sm"
-            >
-              <img src="/images/NofilterCafeLOGO.jpeg" alt="Nofiltr Art Cafe logo" className="h-44 w-44 rounded-[1.6rem] object-cover sm:h-60 sm:w-60" />
-            </motion.div>
-
-            <motion.span
-              animate={{ y: [0, -20, -40], opacity: [0, 0.28, 0] }}
-              transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute left-[45%] top-0 h-12 w-2 rounded-full bg-[#F5F5DC]/30 blur-sm"
-            />
-            <motion.span
-              animate={{ y: [0, -18, -36], opacity: [0, 0.22, 0] }}
-              transition={{ duration: 4.2, delay: 0.7, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute left-[54%] top-1 h-10 w-2 rounded-full bg-[#F5F5DC]/25 blur-sm"
-            />
-          </div>
-
-          <motion.div {...fadeUp} className="mx-auto mt-10 w-full max-w-4xl">
-            <h1 className="text-5xl font-medium leading-[0.95] tracking-[0.02em] text-[#F5F5DC] sm:text-6xl md:text-7xl" style={{ fontFamily: "Cormorant Garamond, serif" }}>
-              <span className="italic text-[#C8A27C]">Bites, Brews and Jazzy Evenings</span>
-            </h1>
-            <p className="mt-5 text-lg font-light leading-relaxed tracking-[0.01em] text-[#F5F5DC]/90 sm:text-[1.55rem]">
-              You deserve the <span className="italic text-[#C8A27C]">best!</span>
+          <motion.div
+            initial={{ opacity: 0, y: 34 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.15, ease: [0.16, 1, 0.3, 1] }}
+            className="relative z-20 mx-auto flex min-h-screen w-full max-w-5xl flex-col items-center justify-center px-6 pb-20 pt-16 text-center"
+            style={{ fontFamily: "Manrope, sans-serif", transform: "translateZ(0)" }}
+          >
+            <p className="rounded-full border border-white/20 bg-white/12 px-5 py-2 text-[0.68rem] font-medium uppercase tracking-[0.62em] text-[#C8A27C]/95 shadow-[0_0_22px_rgba(245,245,220,0.16)] backdrop-blur-md sm:text-xs">
+              Something Premium Is Brewing
             </p>
+
+            <div className="relative mt-10">
+              <motion.div
+                animate={{ scale: [1, 1.04, 1], opacity: [0.2, 0.34, 0.2] }}
+                transition={{ duration: 4.4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute left-1/2 top-1/2 h-52 w-52 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C8A27C]/35 blur-3xl"
+              />
+              <motion.div
+                animate={{ y: [0, -9, 0] }}
+                transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut" }}
+                className="relative rounded-[2rem] border border-[#C8A27C]/20 bg-[#6F4E37]/36 p-3 backdrop-blur-sm"
+              >
+                <img src="/images/NofilterCafeLOGO.jpeg" alt="Nofiltr Art Cafe logo" className="h-44 w-44 rounded-[1.6rem] object-cover sm:h-60 sm:w-60" />
+              </motion.div>
+
+              <motion.span
+                animate={{ y: [0, -20, -40], opacity: [0, 0.28, 0] }}
+                transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute left-[45%] top-0 h-12 w-2 rounded-full bg-[#F5F5DC]/30 blur-sm"
+              />
+              <motion.span
+                animate={{ y: [0, -18, -36], opacity: [0, 0.22, 0] }}
+                transition={{ duration: 4.2, delay: 0.7, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute left-[54%] top-1 h-10 w-2 rounded-full bg-[#F5F5DC]/25 blur-sm"
+              />
+            </div>
+
+            <motion.div {...fadeUp} className="mx-auto mt-10 w-full max-w-4xl">
+              <h1 className="text-5xl font-medium leading-[0.95] tracking-[0.02em] text-[#F5F5DC] sm:text-6xl md:text-7xl" style={{ fontFamily: "Cormorant Garamond, serif" }}>
+                <span className="italic text-[#C8A27C]">Bites, Brews and Jazzy Evenings</span>
+              </h1>
+              <p className="mt-5 text-lg font-light leading-relaxed tracking-[0.01em] text-[#F5F5DC]/90 sm:text-[1.55rem]">
+                You deserve the <span className="italic text-[#C8A27C]">best!</span>
+              </p>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </section>
 
       <section className="overflow-hidden border-y border-[#C8A27C]/12 bg-[#291711] py-5">
         <motion.div animate={{ x: ["0%", "-50%"] }} transition={{ duration: 26, repeat: Infinity, ease: "linear" }} className="flex w-[200%]">
           {[0, 1].map((i) => (
             <div key={i} className="flex min-w-[100%] items-center justify-around gap-14 whitespace-nowrap px-8 text-4xl italic text-[#C8A27C]/92 sm:text-4xl" style={{ fontFamily: "Cormorant Garamond, serif" }}>
-              <span>Vinyl nights</span><span>•</span><span>Single origin</span><span>•</span><span>Hand-crafted</span><span>•</span><span>Slow mornings</span><span>•</span><span>Latte art</span><span>•</span><span>Soft lights</span><span>•</span><span>Acoustic evenings</span><span>•</span><span>Open mic</span><span>•</span>
+              <span>Vinyl nights</span><span>-</span><span>Single origin</span><span>-</span><span>Hand-crafted</span><span>-</span><span>Slow mornings</span><span>-</span><span>Latte art</span><span>-</span><span>Soft lights</span><span>-</span><span>Acoustic evenings</span><span>-</span><span>Open mic</span><span>-</span>
             </div>
           ))}
         </motion.div>
       </section>
 
       <section className="bg-gradient-to-b from-[#362019] to-[#3b231c]">
-        <motion.div {...fadeUp} className="mx-auto w-full max-w-5xl px-6 py-12 sm:py-14">
+        <motion.div {...fadeUp} className="mx-auto w-full max-w-5xl px-6 pb-12 pt-[10em] sm:pb-14">
           <h5 className="mt-2 text-center text-5xl font-medium leading-[1.04] tracking-[0.01em] text-[#F5F5DC] sm:text-6xl" style={{ fontFamily: "Cormorant Garamond, serif" }}>
             <span className="italic text-[#C8A27C]">We've been busy! You'll see why </span>
           </h5>
