@@ -90,6 +90,16 @@ export default function Hero() {
         </motion.div>
       </section>
 
+      <section className="overflow-hidden border-y border-[#C8A27C]/12 bg-[#291711] py-5">
+        <motion.div animate={{ x: ["0%", "-50%"] }} transition={{ duration: 26, repeat: Infinity, ease: "linear" }} className="flex w-[200%]">
+          {[0, 1].map((i) => (
+            <div key={i} className="flex min-w-[100%] items-center justify-around gap-14 whitespace-nowrap px-8 text-4xl italic text-[#C8A27C]/92 sm:text-4xl" style={{ fontFamily: "Cormorant Garamond, serif" }}>
+              <span>Vinyl nights</span><span>•</span><span>Single origin</span><span>•</span><span>Hand-crafted</span><span>•</span><span>Slow mornings</span><span>•</span><span>Latte art</span><span>•</span><span>Soft lights</span><span>•</span><span>Acoustic evenings</span><span>•</span><span>Open mic</span><span>•</span>
+            </div>
+          ))}
+        </motion.div>
+      </section>
+
       <section className="bg-gradient-to-b from-[#362019] to-[#3b231c]">
         <motion.div {...fadeUp} className="mx-auto w-full max-w-5xl px-6 py-12 sm:py-14">
           <h5 className="mt-2 text-center text-5xl font-medium leading-[1.04] tracking-[0.01em] text-[#F5F5DC] sm:text-6xl" style={{ fontFamily: "Cormorant Garamond, serif" }}>
@@ -144,25 +154,23 @@ export default function Hero() {
         </motion.div>
       </section>
 
-      <section className="overflow-hidden border-y border-[#C8A27C]/12 bg-[#291711] py-5">
-        <motion.div animate={{ x: ["0%", "-50%"] }} transition={{ duration: 26, repeat: Infinity, ease: "linear" }} className="flex w-[200%]">
-          {[0, 1].map((i) => (
-            <div key={i} className="flex min-w-[100%] items-center justify-around gap-14 whitespace-nowrap px-8 text-4xl italic text-[#C8A27C]/92 sm:text-4xl" style={{ fontFamily: "Cormorant Garamond, serif" }}>
-              <span>Vinyl nights</span><span>•</span><span>Single origin</span><span>•</span><span>Hand-crafted</span><span>•</span><span>Slow mornings</span><span>•</span><span>Latte art</span><span>•</span><span>Soft lights</span><span>•</span><span>Acoustic evenings</span><span>•</span><span>Open mic</span><span>•</span>
-            </div>
-          ))}
-        </motion.div>
-      </section>
+      <section className="relative overflow-hidden bg-[#2b1914] px-6 py-20 sm:py-24">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_120%,rgba(200,162,124,0.12),transparent_45%),radial-gradient(circle_at_80%_-20%,rgba(245,245,220,0.07),transparent_40%)]" />
+        <motion.div {...fadeUp} className="relative mx-auto max-w-4xl text-center">
+          <p className="text-[0.68rem] font-medium uppercase tracking-[0.55em] text-[#C8A27C]/90 sm:text-xs">Stay Connected</p>
+          <h6 className="mt-5 text-4xl font-medium leading-tight tracking-[0.01em] text-[#F5F5DC] sm:text-5xl" style={{ fontFamily: "Cormorant Garamond, serif" }}>
+            Follow our story, one <span className="italic text-[#C8A27C]">brew</span> at a time.
+          </h6>
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-[#F5F5DC]/72 sm:text-lg">
+            Fresh updates, music nights, menu drops, and behind-the-scenes cafe moments.
+          </p>
 
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#3a221b] to-[#2a1712] px-6 py-20 sm:py-24">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(200,162,124,0.18),transparent_52%)]" />
-        <motion.div {...fadeUp} className="mx-auto max-w-4xl text-center">
           <motion.a
             href="https://instagram.com/nofiltr.artcafe"
             target="_blank"
             rel="noreferrer"
             whileHover={{ y: -2, scale: 1.01 }}
-            className="mx-auto inline-flex items-center gap-3 rounded-full border border-[#C8A27C]/30 bg-[#4A291F]/28 px-7 py-3 text-xl text-[#F5F5DC] backdrop-blur-sm transition-all duration-300"
+            className="mx-auto mt-9 inline-flex items-center gap-3 rounded-full border border-[#C8A27C]/35 bg-[#4A291F]/34 px-7 py-3 text-xl text-[#F5F5DC] shadow-[0_10px_40px_rgba(0,0,0,0.22)] backdrop-blur-sm transition-all duration-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -179,6 +187,7 @@ export default function Hero() {
             </svg>
             <span className="text-2xl">@nofiltr.artcafe</span>
           </motion.a>
+          <p className="mt-10 text-[0.7rem] uppercase tracking-[0.4em] text-[#C8A27C]/70">NoFiltr.Cafe</p>
         </motion.div>
       </section>
     </main>
