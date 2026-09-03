@@ -90,30 +90,6 @@ export default function Contact() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
-
-            {/* Newsletter */}
-            <div className="contact__newsletter">
-              <h4 className="contact__newsletter-title">Stay in the Loop</h4>
-              <p className="contact__newsletter-text">Get updates on events, new menu items, and special offers.</p>
-              <form className="contact__newsletter-form" onSubmit={handleSubmit}>
-                <div className="contact__input-wrapper">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="your@email.com"
-                    className="contact__input"
-                    required
-                  />
-                  <button type="submit" className="contact__submit" aria-label="Subscribe">
-                    <FiSend />
-                  </button>
-                </div>
-                {submitted && (
-                  <p className="contact__success">Thanks for subscribing! ☕</p>
-                )}
-              </form>
-            </div>
           </ScrollReveal>
         </div>
       </div>

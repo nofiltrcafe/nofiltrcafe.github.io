@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 import logo from '../assets/logo.jpeg';
-import heroBg from '../assets/hero_bg.png';
+import heroBg from '../assets/hero_bg.jpeg';
 
 export default function Hero() {
   const [loaded, setLoaded] = useState(false);
@@ -34,7 +34,7 @@ export default function Hero() {
   return (
     <section className="hero" id="home" ref={heroRef}>
       <div className="hero__bg">
-        <img src={heroBg} alt="NoFiltr Art Cafe interior" loading="eager" />
+        <img src={heroBg} alt="NoFiltr Art Cafe interior" loading="eager" fetchpriority="high" />
         <div className="hero__overlay" />
       </div>
 

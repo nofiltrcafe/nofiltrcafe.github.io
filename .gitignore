@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# PDF and raw assets
+menu.pdf
+menu.txt
+extracted_images/
+NofilterCafeLOGO.jpeg
