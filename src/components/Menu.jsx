@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import ScrollReveal from './ScrollReveal';
-import coffeeArt from '../assets/coffee_art.jpeg';
-import burgerPlate from '../assets/burger_plate.jpeg';
-import mocktailDrink from '../assets/mocktail_drink.jpeg';
-import sandwichWrap from '../assets/sandwich_wrap.jpeg';
-import dessertPlate from '../assets/dessert_plate.jpeg';
-import friesBites from '../assets/fries_bites.jpeg';
+import coffeeArt from '../assets/coffee_art.jpg';
+import burgerPlate from '../assets/burger_plate.jpg';
+import mocktailDrink from '../assets/mocktail_drink.jpg';
+import sandwichWrap from '../assets/sandwich_wrap.jpg';
+import dessertPlate from '../assets/dessert_plate.jpg';
+import friesBites from '../assets/fries_bites.jpg';
 
 const MINIMAL_MENU_DATA = [
   {

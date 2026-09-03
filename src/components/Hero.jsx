@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 import logo from '../assets/logo.jpeg';
-import heroBg from '../assets/hero_bg.jpeg';
+import heroBg from '../assets/hero_bg.jpg';
 
 export default function Hero() {
   const [loaded, setLoaded] = useState(false);

@@ -1,5 +1,5 @@
 import ScrollReveal from './ScrollReveal';
-import coffeeArt from '../assets/coffee_art.jpeg';
+import coffeeArt from '../assets/coffee_art.jpg';
 import { FiCoffee, FiMusic, FiBookOpen, FiHeart, FiStar } from 'react-icons/fi';
 
 const VALUES = [
